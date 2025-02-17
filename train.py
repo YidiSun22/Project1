@@ -163,7 +163,7 @@ train_val_dataset = MultiLabelDataset("train_val", transform=data_transforms)
 
 # Test dataset
 test_dataset = MultiLabelDataset("test", transform=data_transforms)
-test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+test_loader = DataLoader(test_dataset, batch_size=32,num_workers=num_workers, shuffle=False)
 
 # Check dataset sizes
 print(f"✅ Training + Validation dataset size: {len(train_val_dataset)}")
